@@ -688,3 +688,39 @@ footer {
   font-size: 1rem;
   font-weight: 600;
 }
+
+.animated-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.animated-logo:hover {
+  transform: scale(1.03);
+}
+
+.logo-img {
+  width: 42px;
+  height: auto;
+  border: none;
+  object-fit: contain;
+  image-rendering: auto;
+  box-shadow: none;
+  border-radius: 0; /* <-- Retira o formato circular */
+}
+
+
+.logo-text strong {
+  font-size: 1.1rem;
+  color: var(--accent);
+  display: block;
+}
+
+.logo-role {
+  font-size: 0.75rem;
+  color: var(--text);
+  opacity: 0.75;
+}
