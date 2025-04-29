@@ -25,4 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const progress = (scrollY / docHeight) * 100;
     progressBar.style.width = `${progress}%`;
   });
+  // Loader animation
+  const loader = document.getElementById('loader');
+  setTimeout(() => {
+    loader.style.opacity = '0';
+    loader.style.pointerEvents = 'none';
+    setTimeout(() => loader.remove(), 800);
+  }, 1200);
+
 });
