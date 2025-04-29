@@ -29,8 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const loader = document.getElementById('loader');
   setTimeout(() => {
     loader.style.opacity = '0';
+    loader.style.backdropFilter = 'blur(0px)';
     loader.style.pointerEvents = 'none';
-    setTimeout(() => loader.remove(), 800);
-  }, 1200);
+    setTimeout(() => loader.remove(), 1000);
+  }, 3000); // mostra por ~3 segundos
+
+  document.querySelectorAll('.circle-skill').forEach(skill => {
+    const percent = parseInt(skill.getAttribute('data-percent'), 10);
+    const path = skill.querySelector('.circle');
+  
+    const offset = 100 - percent;
+    path.style.transition = 'stroke-dashoffset 1.4s ease-out';
+    path.style.strokeDashoffset = offset;
+  });
+  
+
 
 });
