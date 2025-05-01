@@ -724,3 +724,52 @@ footer {
   color: var(--text);
   opacity: 0.75;
 }
+
+.music-button {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.music-button:hover {
+  background: var(--accent);
+  color: var(--background);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+  transform: translateY(-2px);
+}
+
+.floating-music-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--background);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+  cursor: pointer;
+  z-index: 999;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.floating-music-button:hover {
+  background: #ff87c2;
+  transform: scale(1.1);
+}
+
+.floating-music-button.playing {
+  background: var(--text);
+  color: var(--accent);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}

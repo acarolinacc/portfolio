@@ -343,11 +343,15 @@
     </div>
   </section>
   
+  <button onclick="toggleMusic()" id="music-toggle" class="floating-music-button">🎵</button>
 
-  <footer class="fade-in">
+  <footer class="fade-in" id="footer">
+    <audio id="bg-music" src="music.mp3" preload="auto" loop></audio>
+  
+  
     <p>&copy; 2025 Carolina Costa — Crafted with passion, precision, and a little bit of coffee ☕🩷</p>
   </footer>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
